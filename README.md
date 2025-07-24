@@ -1,36 +1,38 @@
-# unware-bot
+> ![unware-bot screenshot](https://i.ibb.co/8D50yCqc/photo-5400011374685451857-c.jpg)  
+> # unware bot
 
-telegram bot + web backend for gta models & textures database.
+# ᐳ Description  
+> Telegram bot and web backend for GTA models & textures database.  
 
-what it does:  
-- converts `.bpc` files to `.zip`  
-- converts `.mod` files to `.dff` and back  
-- website with full models list + “get” button  
-- separate admin site to edit models list  
-- stores data in json files  
-- uses kram & pvrttextoolcli for texture conversions (old)
+> Features:  
+> * Converts `.bpc` files -> `.zip`  
+> * Converts `.mod` files <-> `.dff`  
+> * Website with full models list and “get” button  
+> * Separate admin site to edit models list  
+> * Stores data in JSON files  
+> * Uses kram and pvrttextoolcli for texture conversions (legacy)
 
-setup:  
-clone repo:  
-`git clone https://github.com/psychobye/unware-bot.git && cd unware-bot`  
-install deps:  
-`pip install -r requirements.txt`  
-edit `config.py` — add your telegram api token, admin/chat ids
+# ᐳ Setup  
+> * Clone the repo:  
+> `git clone https://github.com/psychobye/unware-bot.git && cd unware-bot`  
+> * Install dependencies:  
+> `pip install -r requirements.txt`  
+> * Edit `config.py` — add your Telegram API token and admin/chat IDs
 
-**linux users must:**  
-- install kram from https://github.com/alecazam/kram/releases/download/v1.7.30/kram-linux.zip  
-- unzip, put binary somewhere, update `KRAM_PATH` in `config.py`  
-- update `PVRTEXTOOL_PATH` too  
+# ᐳ Linux users must  
+> * Install kram from [release](https://github.com/alecazam/kram/releases/download/v1.7.30/kram-linux.zip)  
+> * Unzip, place the binary somewhere convenient  
+> * Update `KRAM_PATH` and `PVRTEXTOOL_PATH` in `config.py`
 
-run:  
-`python main.py`
+# ᐳ Run  
+> `python main.py`
 
-notes:  
-- no hardcoded paths except in `config.py`   
-- async and efficient processing  
-- json based storage for models & skins  
-- web frontend for users and admins  
+# ᐳ Notes  
+> * No hardcoded paths except in `config.py`  
+> * Async and efficient processing  
+> * JSON-based storage for models and skins  
+> * Web frontend for users and admins
 
-## TODO
-- [ ] btx converter (win & linux)
-- [ ] anti‑spam
+# ᐳ TODO  
+> - [ ] BTX converter (Windows & Linux)  
+> - [ ] Anti-spam
