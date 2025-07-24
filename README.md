@@ -32,5 +32,5 @@ notes:
 - web frontend for users and admins  
 
 ## TODO
-- btx converter (win & linux)
-- anti-spam
+- [ ] btx converter (win & linux)
+- [ ] anti‑spam
