@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>unware admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-styles.css" />
+</head>
+<body>
+  <h1>unware admin</h1>
+
+  <div class="admin-header">
+    <button id="export-btn">📥 экспорт JSON</button>
+    <div id="tabs">
+      <button id="tab-cars" class="tab active">🚗 тачки</button>
+      <button id="tab-skins" class="tab">🎨 скины</button>
+    </div>
+  </div>
+
+  <input type="text" id="search" placeholder="чё ищем? id, name, model, тип..." />
+  <div id="item-list"></div>
+  <div id="pagination"></div>
+
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-content">
+      <label>ID: <input type="number" id="edit-id" /></label>
+      <label>Name: <input type="text" id="edit-name" /></label>
+      <label>Model: <input type="text" id="edit-model" /></label>
+      <label>Image URL: <input type="text" id="edit-image" /></label>
+      <div id="skin-type-field">
+        <label>Skin Type:
+          <select id="edit-type">
+            <option value="0">Остальное</option>
+            <option value="6">Рабочий класс</option>
+            <option value="7">Магазин + донат</option>
+          </select>
+        </label>
+        <label>Image:
+        <div class="image-upload">
+          <input type="hidden" id="edit-image" />
+          <button id="upload-btn" type="button">📁 загрузить фото</button>
+          <input type="file" id="file-input" accept="image/*" style="display: none;" />
+          <div id="image-preview-container">
+            <img id="image-preview" src="" alt="Preview" />
+            <div id="upload-status"></div>
+          </div>
+        </div>
+      </label>
+      </div>
+      <div class="modal-actions">
+        <button id="save-btn">💾 сохранить</button>
+        <button id="cancel-btn">❌ отмена</button>
+      </div>
+    </div>
+  </div>
+  <script src="admin-script.js" defer></script>
+</body>
+</html>
